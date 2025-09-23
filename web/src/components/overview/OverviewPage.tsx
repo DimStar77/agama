@@ -21,12 +21,11 @@
  */
 
 import React from "react";
-import { Content, Grid, GridItem, Stack } from "@patternfly/react-core";
+import { Content, Grid, GridItem } from "@patternfly/react-core";
 import { Page } from "~/components/core";
-import L10nSection from "./L10nSection";
-import StorageSection from "./StorageSection";
-import SoftwareSection from "./SoftwareSection";
 import { _ } from "~/i18n";
+import SystemInformationSection from "./SystemInformationSection";
+import InstallationSettingsSection from "./InstallationSettingsSection";
 
 export default function OverviewPage() {
   return (
@@ -37,17 +36,11 @@ export default function OverviewPage() {
 
       <Page.Content>
         <Grid hasGutter>
-          <GridItem sm={12}>
-            <Stack hasGutter>
-              <Content>
-                {_(
-                  "These are the most relevant installation settings. Feel free to browse the sections in the menu for further details.",
-                )}
-              </Content>
-              <L10nSection />
-              <StorageSection />
-              <SoftwareSection />
-            </Stack>
+          <GridItem sm={6}>
+            <InstallationSettingsSection />
+          </GridItem>
+          <GridItem sm={6}>
+            <SystemInformationSection />
           </GridItem>
         </Grid>
       </Page.Content>

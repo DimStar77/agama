@@ -32,7 +32,8 @@ import {
   LoginPage,
 } from "~/components/core";
 import StorageProgress from "~/components/storage/Progress";
-import { OverviewPage } from "~/components/overview";
+import OverviewPage from "./components/overview/OverviewPage";
+import HostnamePage from "./components/system/HostnamePage";
 import l10nRoutes from "~/routes/l10n";
 import networkRoutes from "~/routes/network";
 import productsRoutes from "~/routes/products";
@@ -42,7 +43,6 @@ import softwareRoutes from "~/routes/software";
 import usersRoutes from "~/routes/users";
 import { HOSTNAME, ROOT as PATHS, STORAGE } from "./routes/paths";
 import { N_ } from "~/i18n";
-import HostnamePage from "./components/system/HostnamePage";
 
 const rootRoutes = () => [
   {
