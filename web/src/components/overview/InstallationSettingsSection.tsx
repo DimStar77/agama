@@ -64,7 +64,7 @@ export default function InstallationSettingsSection() {
                   <Link to={L10N.root} variant="link" isInline>
                     {_("English (United Kingdomn)")}
                   </Link>
-                  <small>{_("Using Spanish keyboard and Canary Islands timezone")}</small>
+                  <small>{_("Spanish keyboard and Canary Islands timezone")}</small>
                 </Flex>
               </DescriptionListDescription>
             </DescriptionListGroup>
@@ -135,7 +135,7 @@ export default function InstallationSettingsSection() {
                   <Link to={USER.root} variant="link" isInline>
                     {_("Configured")}
                   </Link>
-                  <small>{_("Using different password for root user (no sudo)")}</small>
+                  <small>{_("With different password for root user")}</small>
                 </Flex>
               </DescriptionListDescription>
             </DescriptionListGroup>

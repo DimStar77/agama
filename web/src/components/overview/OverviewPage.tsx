@@ -37,10 +37,10 @@ export default function OverviewPage() {
       <Page.Content>
         <Grid hasGutter>
           <GridItem sm={6}>
-            <InstallationSettingsSection />
+            <SystemInformationSection />
           </GridItem>
           <GridItem sm={6}>
-            <SystemInformationSection />
+            <InstallationSettingsSection />
           </GridItem>
         </Grid>
       </Page.Content>
