@@ -35,7 +35,8 @@ pub use keyboard::Keymap;
 pub use locale::LocaleEntry;
 pub use timezone::TimezoneEntry;
 
-use super::{helpers, LocaleError};
+use super::LocaleError;
+use agama_lib::localization::helpers;
 use keyboard::KeymapsDatabase;
 use locale::LocalesDatabase;
 use timezone::TimezonesDatabase;

@@ -26,6 +26,7 @@ chrono = "0.4.38"
 regex = "1.11.1"
 home = "0.5.11"
 fluent-uri = "0.3.2"
+gettext-rs = { version = "0.7.1", features = ["gettext-system"] }
 
 [[bin]]
 name = "agama"

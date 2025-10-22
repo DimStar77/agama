@@ -19,12 +19,12 @@
 // find current contact information at www.suse.com.
 
 use agama_server::{
-    l10n::{self, helpers},
     logs::init_logging,
     questions,
 };
 
 use agama_lib::connection_to;
+use agama_lib::localization::helpers;
 use anyhow::Context;
 use std::future::pending;
 
@@ -33,7 +33,7 @@ const SERVICE_NAME: &str = "org.opensuse.Agama1";
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let locale = helpers::init_locale()?;
+    let _ = helpers::init_locale()?;
     init_logging().context("Could not initialize the logger")?;
 
     let connection = connection_to(ADDRESS)

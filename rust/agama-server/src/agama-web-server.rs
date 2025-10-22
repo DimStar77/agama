@@ -25,9 +25,9 @@ use std::{
 };
 
 use agama_lib::{auth::AuthToken, connection_to};
+use agama_lib::localization::helpers;
 use agama_server::{
     cert::Certificate,
-    l10n::helpers,
     logs::init_logging,
     web::{self, run_monitor},
 };

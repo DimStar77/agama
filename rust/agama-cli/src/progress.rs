@@ -23,6 +23,7 @@ use agama_lib::{
     progress::Progress,
 };
 use console::style;
+use gettextrs::gettext;
 use indicatif::{ProgressBar, ProgressStyle};
 use std::time::Duration;
 
@@ -132,7 +133,7 @@ impl ProgressMonitor {
     fn finish(&mut self) {
         self.running = false;
         if let Some(bar) = self.bar.take() {
-            bar.finish_with_message("Done");
+            bar.finish_with_message(gettext("Done"));
         }
     }
 }

@@ -19,7 +19,7 @@
 // find current contact information at www.suse.com.
 
 use agama_locale_data::{get_localectl_keymaps, keyboard::XkbConfigRegistry, KeymapId};
-use gettextrs::*;
+use gettextrs::dgettext;
 use serde::ser::{Serialize, SerializeStruct};
 use std::collections::HashMap;
 
@@ -41,7 +41,7 @@ impl Keymap {
     }
 
     pub fn localized_description(&self) -> String {
-        gettext(&self.description)
+        dgettext("xkeyboard-config", &self.description)
     }
 }
 

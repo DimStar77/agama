@@ -19,7 +19,6 @@
 // find current contact information at www.suse.com.
 
 pub mod error;
-pub mod helpers;
 mod model;
 pub mod web;
 

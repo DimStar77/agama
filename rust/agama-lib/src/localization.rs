@@ -20,6 +20,7 @@
 
 //! Implements support for handling the localization settings
 
+pub mod helpers;
 mod http_client;
 pub mod model;
 mod settings;
