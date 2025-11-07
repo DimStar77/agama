@@ -37,7 +37,7 @@ import {
   FlexItem,
   Title,
 } from "@patternfly/react-core";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import * as partitionUtils from "~/components/storage/utils/partition";
 import { NestedContent } from "../core";
 import Text from "~/components/core/Text";

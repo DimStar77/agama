@@ -21,7 +21,7 @@
  */
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { _ } from "~/i18n";
 import { useReactivateSystem } from "~/hooks/storage/system";
 import { STORAGE as PATHS } from "~/routes/paths";

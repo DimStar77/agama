@@ -23,7 +23,7 @@
 import React, { forwardRef } from "react";
 import { Button, Flex, FlexItem } from "@patternfly/react-core";
 import Icon from "~/components/layout/Icon";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import MenuButton, { CustomToggleProps } from "~/components/core/MenuButton";
 import { STORAGE as PATHS } from "~/routes/paths";
 import { model } from "~/types/storage";

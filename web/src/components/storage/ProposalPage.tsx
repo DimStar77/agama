@@ -66,7 +66,7 @@ import { useSystemErrors, useConfigErrors } from "~/queries/issues";
 import { STORAGE as PATHS } from "~/routes/paths";
 import { _, n_ } from "~/i18n";
 import { useProgress, useProgressChanges } from "~/queries/progress";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router";
 import { useStorageUiState } from "~/context/storage-ui-state";
 import MenuButton from "../core/MenuButton";
 import spacingStyles from "@patternfly/react-styles/css/utilities/Spacing/spacing";

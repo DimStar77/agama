@@ -21,7 +21,7 @@
  */
 
 import React, { useId } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router";
 import {
   ActionGroup,
   Content,

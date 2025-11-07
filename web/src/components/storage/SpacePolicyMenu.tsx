@@ -25,7 +25,7 @@ import { Button, Flex, FlexItem } from "@patternfly/react-core";
 import MenuButton, { CustomToggleProps } from "~/components/core/MenuButton";
 import Text from "~/components/core/Text";
 import Icon from "~/components/layout/Icon";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { useSetSpacePolicy } from "~/hooks/storage/space-policy";
 import { SPACE_POLICIES } from "~/components/storage/utils";
 import { apiModel } from "~/api/storage/types";
