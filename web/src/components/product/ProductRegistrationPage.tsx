@@ -406,7 +406,7 @@ const HostnameAlert = () => {
   );
 
   return (
-    <Alert title={title} variant="custom" isPlain>
+    <Alert title={title} variant="custom">
       {descStart} {link} {descEnd}
     </Alert>
   );
