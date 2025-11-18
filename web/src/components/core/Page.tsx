@@ -40,13 +40,11 @@ import {
   Title,
   TitleProps,
 } from "@patternfly/react-core";
-import { ProductRegistrationAlert } from "~/components/product";
 import Link, { LinkProps } from "~/components/core/Link";
 import textStyles from "@patternfly/react-styles/css/utilities/Text/text";
 import flexStyles from "@patternfly/react-styles/css/utilities/Flex/flex";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { isEmpty, isObject } from "radashi";
-import { SIDE_PATHS } from "~/routes/paths";
 import { _ } from "~/i18n";
 
 /**
@@ -274,16 +272,10 @@ const Submit = ({ children, ...props }: SubmitActionProps) => {
  * @see [Patternfly Page/PageSection](https://www.patternfly.org/components/page#pagesection)
  */
 const Content = ({ children, ...pageSectionProps }: React.PropsWithChildren<PageSectionProps>) => {
-  const location = useLocation();
-  const mountRegistrationAlert = !SIDE_PATHS.includes(location.pathname);
-
   return (
-    <>
-      <PageSection hasBodyWrapper={false} isFilled component="div" {...pageSectionProps}>
-        {mountRegistrationAlert && <ProductRegistrationAlert />}
-        {children}
-      </PageSection>
-    </>
+    <PageSection hasBodyWrapper={false} isFilled component="div" {...pageSectionProps}>
+      {children}
+    </PageSection>
   );
 };
 
