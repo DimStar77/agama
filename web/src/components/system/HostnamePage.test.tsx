@@ -45,10 +45,6 @@ let mockStaticHostname: string;
 
 const mockHostnameMutation = jest.fn().mockResolvedValue(true);
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 jest.mock("~/queries/software", () => ({
   ...jest.requireActual("~/queries/software"),
   useRegistration: (): ReturnType<typeof useRegistration> => registrationInfoMock,

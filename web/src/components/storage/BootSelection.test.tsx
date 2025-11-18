@@ -26,12 +26,6 @@ import { installerRender, mockNavigateFn } from "~/test-utils";
 import BootSelection from "./BootSelection";
 import { StorageDevice } from "~/types/storage";
 
-// FIXME: drop this mock once a better solution for dealing with
-// ProductRegistrationAlert, which uses a query with suspense,
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 const sda: StorageDevice = {
   sid: 59,
   isDrive: true,

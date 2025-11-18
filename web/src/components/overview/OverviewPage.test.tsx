@@ -28,9 +28,6 @@ import { OverviewPage } from "~/components/overview";
 jest.mock("~/components/overview/L10nSection", () => () => <div>Localization Section</div>);
 jest.mock("~/components/overview/StorageSection", () => () => <div>Storage Section</div>);
 jest.mock("~/components/overview/SoftwareSection", () => () => <div>Software Section</div>);
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert</div>
-));
 
 describe("when a product is selected", () => {
   it("renders the overview page content", async () => {

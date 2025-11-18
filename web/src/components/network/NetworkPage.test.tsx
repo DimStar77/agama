@@ -25,11 +25,6 @@ import { screen } from "@testing-library/react";
 import { installerRender } from "~/test-utils";
 import NetworkPage from "~/components/network/NetworkPage";
 
-jest.mock(
-  "~/components/product/ProductRegistrationAlert",
-  () => () => -(<div>ProductRegistrationAlert Mock</div>),
-);
-
 jest.mock("~/components/network/WifiNetworksList", () => () => <div>WifiNetworksList Mock</div>);
 
 jest.mock("~/components/network/WiredConnectionsList", () => () => (

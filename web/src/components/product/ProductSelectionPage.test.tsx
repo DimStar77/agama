@@ -27,10 +27,6 @@ import { ProductSelectionPage } from "~/components/product";
 import { Product, RegistrationInfo } from "~/types/software";
 import { useProduct, useRegistration } from "~/queries/software";
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 const mockConfigMutation = jest.fn();
 
 const tumbleweed: Product = {

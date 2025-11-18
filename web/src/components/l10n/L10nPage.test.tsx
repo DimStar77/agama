@@ -42,10 +42,6 @@ const timezones = [
   { id: "Europe/Madrid", parts: ["Europe", "Madrid"] },
 ];
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 jest.mock("~/components/core/InstallerOptions", () => () => <div>InstallerOptions Mock</div>);
 
 jest.mock("~/queries/l10n", () => ({

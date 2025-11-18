@@ -30,11 +30,6 @@ const mockConnection: Connection = new Connection("Network 1", {
   state: ConnectionState.activated,
 });
 
-jest.mock(
-  "~/components/product/ProductRegistrationAlert",
-  () => () => -(<div>ProductRegistrationAlert Mock</div>),
-);
-
 jest.mock("~/components/network/WiredConnectionDetails", () => () => (
   <div>WiredConnectionDetails Mock</div>
 ));

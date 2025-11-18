@@ -112,9 +112,6 @@ jest.mock("./ProposalResultSection", () => () => <div>result</div>);
 jest.mock("./ConfigEditor", () => () => <div>installation devices</div>);
 jest.mock("./ConfigureDeviceMenu", () => () => <div>add device menu</div>);
 jest.mock("./ConfigEditorMenu", () => () => <div>config editor menu</div>);
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>registration alert</div>
-));
 
 beforeEach(() => {
   mockUseResetConfigMutation.mockReturnValue({ mutate: jest.fn() });

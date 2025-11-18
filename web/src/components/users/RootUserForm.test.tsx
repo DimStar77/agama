@@ -30,10 +30,6 @@ let mockPublicKey: string;
 let mockHashedPassword: boolean;
 const mockRootUserMutation = jest.fn().mockResolvedValue(true);
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 jest.mock("~/components/users/PasswordCheck", () => () => <div>PasswordCheck Mock</div>);
 
 jest.mock("~/queries/users", () => ({

@@ -55,10 +55,6 @@ let mockConnection: Connection = new Connection("Network 1", {
 
 const mockMutation = jest.fn(() => Promise.resolve());
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 jest.mock("~/queries/network", () => ({
   ...jest.requireActual("~/queries/network"),
   useNetworkDevices: () => [mockDevice],

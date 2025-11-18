@@ -35,10 +35,6 @@ const mockConfigMutation = {
   mutate: jest.fn(),
 };
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 jest.mock("~/queries/l10n", () => ({
   ...jest.requireActual("~/queries/l10n"),
   useL10n: () => ({ locales, selectedLocale: locales[0] }),

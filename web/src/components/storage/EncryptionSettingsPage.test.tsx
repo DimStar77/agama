@@ -52,10 +52,6 @@ const mockNoEncryption: EncryptionHook = {
   disable: jest.fn(),
 };
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>registration alert</div>
-));
-
 const mockUseEncryptionMethods = jest.fn();
 jest.mock("~/queries/storage", () => ({
   ...jest.requireActual("~/queries/storage"),

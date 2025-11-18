@@ -25,10 +25,6 @@ import { screen } from "@testing-library/react";
 import { installerRender } from "~/test-utils";
 import { FormValidationError } from "~/components/core";
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 it("renders nothing when message is null", () => {
   const { container } = installerRender(<FormValidationError message={null} />);
   expect(container).toBeEmptyDOMElement();

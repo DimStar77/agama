@@ -36,10 +36,6 @@ const mockLoginFn = jest.fn();
 const phase: InstallationPhase = InstallationPhase.Startup;
 const isBusy: boolean = false;
 
-jest.mock("~/components/product/ProductRegistrationAlert", () => () => (
-  <div>ProductRegistrationAlert Mock</div>
-));
-
 jest.mock("~/components/layout/Header", () => () => <div>Header Mock</div>);
 
 jest.mock("~/queries/status", () => ({
