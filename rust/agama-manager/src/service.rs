@@ -475,6 +475,7 @@ impl MessageHandler<message::GetExtendedConfig> for Service {
             network: Some(network),
             software: Some(software),
             storage,
+            files: None,
         })
     }
 }
