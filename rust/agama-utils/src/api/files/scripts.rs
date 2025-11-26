@@ -153,6 +153,7 @@ impl Script {
             .as_ref()
             .join(self.group().to_string())
             .join(self.name());
+        println!("DEBUG: path={}", path.display().to_string());
         let runner = match self {
             Script::Pre(inner) => &inner.runner(),
             Script::PostPartitioning(inner) => &inner.runner(),
@@ -390,14 +391,18 @@ impl ScriptRunner {
 
     fn run<P: AsRef<Path>>(&self, path: P) -> Result<(), Error> {
         let path = path.as_ref();
+        println!("DEBUG: chroot={}", self.chroot);
         let output = if self.chroot {
             process::Command::new("chroot")
                 .args(["/mnt", &path.to_string_lossy()])
                 .output()?
         } else {
-            process::Command::new(path).output()?
+            process::Command::new(path)
+                .output()
+                .inspect_err(|e| println!("DEBUG: error={e}"))?
         };
 
+        println!("DEBUG: output={output:?}");
         fs::write(path.with_extension("log"), output.stdout)?;
         fs::write(path.with_extension("err"), output.stderr)?;
         fs::write(path.with_extension("out"), output.status.to_string())?;

@@ -89,6 +89,7 @@ mod tests {
             "{{ \"name\": \"pre.sh\", \"content\": \"#!/usr/bin/bash\\ntouch {}\" }}",
             test_file_1.to_str().unwrap()
         );
+        println!("DEBUG: {}", &pre_script_json);
 
         let init_script_json = format!(
             "{{ \"name\": \"init.sh\", \"content\": \"#!/usr/bin/bash\\ntouch {}\" }}",
@@ -99,8 +100,10 @@ mod tests {
             "{{ \"scripts\": {{ \"pre\": [{}], \"init\": [{}] }} }}",
             pre_script_json, init_script_json
         );
+        println!("DEBUG: config json {}", &config);
 
         let config: Config = serde_json::from_str(&config).unwrap();
+        println!("DEBUG: config object {:?}", &config);
         ctx.handler
             .call(message::SetConfig::with(config))
             .await
